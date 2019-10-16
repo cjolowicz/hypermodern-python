@@ -1,0 +1,11 @@
+[paths]
+source =
+   src
+   */site-packages
+
+[run]
+branch = true
+source = hypermodern_python
+
+[report]
+show_missing = true
