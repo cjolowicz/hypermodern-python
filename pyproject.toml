@@ -1,8 +1,13 @@
 [tool.poetry]
 name = "hypermodern-python"
 version = "0.1.0"
-description = ""
-authors = ["Claudio Jolowicz <claudio.jolowicz@cyren.com>"]
+description = "The hypermodern Python project"
+authors = ["Claudio Jolowicz <mail@claudiojolowicz.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/cjolowicz/hypermodern-python"
+repository = "https://github.com/cjolowicz/hypermodern-python"
+keywords = ["hypermodern"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
