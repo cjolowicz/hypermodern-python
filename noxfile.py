@@ -30,7 +30,7 @@ def black(session):
 @nox.session(python=["3.8", "3.7"])
 def lint(session):
     args = session.posargs or locations
-    install_with_constraints(session, "flake8")
+    install_with_constraints(session, "flake8", "flake8-black")
     session.run("flake8", *args)
 
 
