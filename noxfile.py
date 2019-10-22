@@ -19,6 +19,13 @@ def install_with_constraints(session, *args, **kwargs):
         session.install(f"--constraint={requirements.name}", *args, **kwargs)
 
 
+@nox.session(python="3.8")
+def black(session):
+    args = session.posargs or locations
+    install_with_constraints(session, "black")
+    session.run("black", *args)
+
+
 @nox.session(python=["3.8", "3.7"])
 def lint(session):
     args = session.posargs or locations
