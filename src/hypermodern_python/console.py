@@ -1,10 +1,12 @@
 import click
 
-from . import __version__
+from . import __version__, splines
 
 
 @click.command()
+@click.option("-n", "--count", default=-1, help="Number of splines to reticulate")
 @click.version_option(version=__version__)
-def main():
+def main(count):
     """The hypermodern Python project."""
-    click.echo("Hello, world!")
+    for spline in splines.reticulate(count):
+        click.echo(f"Reticulating spline {spline}...")
