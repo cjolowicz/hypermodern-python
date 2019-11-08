@@ -10,5 +10,5 @@ def runner():
 
 
 def test_main_succeeds(runner, mock_sleep):
-    result = runner.invoke(console.main)
+    result = runner.invoke(console.main, ["--count=3"])
     assert result.exit_code == 0
