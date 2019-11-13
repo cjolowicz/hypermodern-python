@@ -1,8 +1,10 @@
+"""Utilities for spline manipulation."""
 import time
 from typing import Iterator
 
 
 def reticulate(count: int = -1) -> Iterator[int]:
+    """Reticulate splines."""
     spline: int = 0
     while count < 0 or spline < count:
         time.sleep(1)
