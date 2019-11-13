@@ -1,4 +1,5 @@
 /.coverage
+/.mypy_cache/
 /.nox/
 /.python-version
 /src/*.egg-info/
