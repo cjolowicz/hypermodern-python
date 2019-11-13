@@ -58,6 +58,13 @@ def safety(session):
 
 
 @nox.session(python=["3.8", "3.7"])
+def mypy(session) -> None:
+    args = session.posargs or locations
+    install_with_constraints(session, "mypy")
+    session.run("mypy", *args)
+
+
+@nox.session(python=["3.8", "3.7"])
 def tests(session):
     args = session.posargs or ["--cov", "-m", "not e2e"]
     session.run("poetry", "install", "--no-dev", external=True)
