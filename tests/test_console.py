@@ -9,6 +9,6 @@ def runner():
     return click.testing.CliRunner()
 
 
-def test_main_succeeds(runner):
+def test_main_succeeds(runner, mock_sleep):
     result = runner.invoke(console.main)
     assert result.exit_code == 0
