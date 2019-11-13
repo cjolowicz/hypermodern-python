@@ -17,6 +17,7 @@ click = "^7.0"
 pytest = "^5.2.2"
 pytest-cov = "^2.8.1"
 pytest-mock = "^1.11.2"
+xdoctest = "^0.10.2"
 
 [tool.poetry.scripts]
 hypermodern-python = "hypermodern_python.console:main"

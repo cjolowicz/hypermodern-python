@@ -185,6 +185,22 @@ version = "0.1.7"
 
 [[package]]
 category = "dev"
+description = "A rewrite of the builtin doctest module"
+name = "xdoctest"
+optional = false
+python-versions = "*"
+version = "0.10.2"
+
+[package.dependencies]
+six = "*"
+
+[package.extras]
+all = ["six", "pytest", "pytest-cov", "codecov", "pygments", "colorama"]
+optional = ["pygments", "colorama"]
+tests = ["pytest", "pytest-cov", "codecov"]
+
+[[package]]
+category = "dev"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 marker = "python_version < \"3.8\""
 name = "zipp"
@@ -200,7 +216,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "d909ee8c16897ef0f83725d5556b300753fa69f2cef7a9fb910661e3809c8671"
+content-hash = "b40e77f09fc9d84474e2d0c09702a4bd7d5784949b57af40fb5ed0e6f0a896de"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -297,6 +313,10 @@ six = [
 wcwidth = [
     {file = "wcwidth-0.1.7-py2.py3-none-any.whl", hash = "sha256:f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"},
     {file = "wcwidth-0.1.7.tar.gz", hash = "sha256:3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e"},
+]
+xdoctest = [
+    {file = "xdoctest-0.10.2-py2.py3-none-any.whl", hash = "sha256:6e6da1ae67de17424edfde1484af2967641de5d5b0a8ec20f02f206d9998f9e9"},
+    {file = "xdoctest-0.10.2.tar.gz", hash = "sha256:7c2f43ddc6c455237878a241e35f570441ecb66c60a6403eaebce90118670ff7"},
 ]
 zipp = [
     {file = "zipp-0.6.0-py2.py3-none-any.whl", hash = "sha256:f06903e9f1f43b12d371004b4ac7b06ab39a44adc747266928ae6debfa7b3335"},
