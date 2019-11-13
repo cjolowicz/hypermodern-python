@@ -5,4 +5,6 @@ max-line-length = 80
 max-complexity = 10
 application-import-names = hypermodern_python,tests
 import-order-style = google
-per-file-ignores = tests/*:S101
+per-file-ignores =
+    tests/*:S101,TYP
+    noxfile.py:TYP
