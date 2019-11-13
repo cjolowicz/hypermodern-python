@@ -1,7 +1,7 @@
 import nox
 
 
-nox.options.sessions = "lint", "tests"
+nox.options.sessions = "lint", "mypy", "tests"
 locations = "src", "tests", "noxfile.py"
 
 
@@ -26,7 +26,7 @@ def lint(session):
 
 
 @nox.session(python=["3.8", "3.7"])
-def mypy(session: Session) -> None:
+def mypy(session) -> None:
     args = session.posargs or locations
     session.install("mypy")
     session.run("mypy", *args)
