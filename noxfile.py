@@ -32,6 +32,13 @@ def mypy(session) -> None:
     session.run("mypy", *args)
 
 
+@nox.session(python="3.7")
+def pytype(session):
+    args = session.posargs or locations
+    session.install("pytype")
+    session.run("pytype", *args)
+
+
 @nox.session(python=["3.8", "3.7"])
 def tests(session):
     args = session.posargs or ["--cov"]
