@@ -1,4 +1,5 @@
 import nox
+from nox.sessions import Session
 
 
 nox.options.sessions = "lint", "mypy", "pytype", "tests"
@@ -6,14 +7,14 @@ locations = "src", "tests", "noxfile.py"
 
 
 @nox.session(python="3.8")
-def black(session):
+def black(session: Session) -> None:
     args = session.posargs or locations
     session.install("black")
     session.run("black", *args)
 
 
 @nox.session(python=["3.8", "3.7"])
-def lint(session):
+def lint(session: Session) -> None:
     args = session.posargs or locations
     session.install(
         "flake8",
@@ -27,21 +28,21 @@ def lint(session):
 
 
 @nox.session(python=["3.8", "3.7"])
-def mypy(session) -> None:
+def mypy(session: Session) -> None:
     args = session.posargs or locations
     session.install("mypy")
     session.run("mypy", *args)
 
 
 @nox.session(python="3.7")
-def pytype(session):
+def pytype(session: Session) -> None:
     args = session.posargs or locations
     session.install("pytype")
     session.run("pytype", "--config=pytype.cfg", *args)
 
 
 @nox.session(python=["3.8", "3.7"])
-def tests(session):
+def tests(session: Session) -> None:
     args = session.posargs or ["--cov"]
     session.run("poetry", "install", external=True)
     session.run("pytest", *args)
