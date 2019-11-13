@@ -66,7 +66,7 @@ def mypy(session) -> None:
 
 @nox.session(python="3.7")
 def pytype(session):
-    args = session.posargs or locations
+    args = session.posargs or ["--disable=import-error", *locations]
     install_with_constraints(session, "pytype")
     session.run("pytype", *args)
 
