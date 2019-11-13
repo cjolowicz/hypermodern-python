@@ -26,6 +26,13 @@ def lint(session):
 
 
 @nox.session(python=["3.8", "3.7"])
+def mypy(session: Session) -> None:
+    args = session.posargs or locations
+    session.install("mypy")
+    session.run("mypy", *args)
+
+
+@nox.session(python=["3.8", "3.7"])
 def tests(session):
     args = session.posargs or ["--cov"]
     session.run("poetry", "install", external=True)
