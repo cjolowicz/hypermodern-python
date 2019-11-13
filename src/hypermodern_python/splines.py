@@ -12,6 +12,12 @@ def reticulate(count: int = -1) -> Iterator[int]:
     Yields:
         A reticulated spline
 
+    Example:
+        >>> from hypermodern_python import splines
+        >>> a, b = splines.reticulate(2)
+        >>> a, b
+        (1, 2)
+
     """
     spline: int = 0
     while count < 0 or spline < count:
