@@ -1,6 +1,9 @@
+from unittest.mock import Mock
+
 import pytest
+from pytest_mock import MockFixture
 
 
 @pytest.fixture
-def mock_sleep(mocker):
+def mock_sleep(mocker: MockFixture) -> Mock:
     return mocker.patch("time.sleep")
