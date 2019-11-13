@@ -36,7 +36,7 @@ def mypy(session) -> None:
 def pytype(session):
     args = session.posargs or locations
     session.install("pytype")
-    session.run("pytype", *args)
+    session.run("pytype", "--config=pytype.cfg", *args)
 
 
 @nox.session(python=["3.8", "3.7"])
