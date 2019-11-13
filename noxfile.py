@@ -51,6 +51,6 @@ def pytype(session: Session) -> None:
 @nox.session(python=["3.8", "3.7"])
 def tests(session: Session) -> None:
     """Run the test suite."""
-    args = session.posargs or ["--cov"]
+    args = session.posargs or ["--cov", "--xdoctest"]
     session.run("poetry", "install", external=True)
     session.run("pytest", *args)
