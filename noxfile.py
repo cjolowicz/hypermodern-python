@@ -1,3 +1,4 @@
+"""Nox sessions."""
 import nox
 from nox.sessions import Session
 
@@ -8,6 +9,7 @@ locations = "src", "tests", "noxfile.py"
 
 @nox.session(python="3.8")
 def black(session: Session) -> None:
+    """Run black code formatter."""
     args = session.posargs or locations
     session.install("black")
     session.run("black", *args)
@@ -15,6 +17,7 @@ def black(session: Session) -> None:
 
 @nox.session(python=["3.8", "3.7"])
 def lint(session: Session) -> None:
+    """Lint using flake8."""
     args = session.posargs or locations
     session.install(
         "flake8",
@@ -30,6 +33,7 @@ def lint(session: Session) -> None:
 
 @nox.session(python=["3.8", "3.7"])
 def mypy(session: Session) -> None:
+    """Type-check using mypy."""
     args = session.posargs or locations
     session.install("mypy")
     session.run("mypy", *args)
@@ -37,6 +41,7 @@ def mypy(session: Session) -> None:
 
 @nox.session(python="3.7")
 def pytype(session: Session) -> None:
+    """Type-check using pytype."""
     args = session.posargs or locations
     session.install("pytype")
     session.run("pytype", "--config=pytype.cfg", *args)
@@ -44,6 +49,7 @@ def pytype(session: Session) -> None:
 
 @nox.session(python=["3.8", "3.7"])
 def tests(session: Session) -> None:
+    """Run the test suite."""
     args = session.posargs or ["--cov"]
     session.run("poetry", "install", external=True)
     session.run("pytest", *args)
