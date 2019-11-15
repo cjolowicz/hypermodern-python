@@ -4,7 +4,7 @@ from nox.sessions import Session
 
 
 nox.options.sessions = "lint", "mypy", "pytype", "tests"
-locations = "src", "tests", "noxfile.py"
+locations = "src", "tests", "noxfile.py", "docs/conf.py"
 
 
 @nox.session(python="3.8")
