@@ -54,3 +54,10 @@ def tests(session: Session) -> None:
     args = session.posargs or ["--cov", "--xdoctest"]
     session.run("poetry", "install", external=True)
     session.run("pytest", *args)
+
+
+@nox.session(python="3.8")
+def docs(session: Session) -> None:
+    """Build the documentation."""
+    session.install("sphinx", "sphinx-rtd-theme")
+    session.run("sphinx-build", "docs", "docs/_build")
