@@ -31,3 +31,9 @@ Hypermodern Python's usage looks like:
 .. option:: --help
 
     Display a short usage message and exit.
+
+.. toctree::
+  :hidden:
+  :maxdepth: 2
+
+  splines
