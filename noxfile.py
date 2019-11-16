@@ -59,5 +59,5 @@ def tests(session: Session) -> None:
 @nox.session(python="3.8")
 def docs(session: Session) -> None:
     """Build the documentation."""
-    session.install("sphinx", "sphinx-rtd-theme")
+    session.run("poetry", "install", "--extras=docs", external=True)
     session.run("sphinx-build", "docs", "docs/_build")
