@@ -491,8 +491,11 @@ more-itertools = "*"
 docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
+[extras]
+docs = ["sphinx", "sphinx-rtd-theme", "sphinx-autodoc-typehints"]
+
 [metadata]
-content-hash = "e5404ff617a33add5ebb97ac4b522429ea2f4fff45b30d2eb2f12d7e266bf205"
+content-hash = "94b8c00370714016ab287addfd46802b6c8117928e3cdc56bd615b3ee7e8764e"
 python-versions = "^3.7"
 
 [metadata.files]
