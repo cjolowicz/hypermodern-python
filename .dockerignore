@@ -1,0 +1,10 @@
+**/__pycache__/
+.coverage
+.git/
+.mypy_cache/
+.nox/
+.python-version
+.pytype/
+Dockerfile
+docs/_build/
+src/*.egg-info/
