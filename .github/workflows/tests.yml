@@ -1,0 +1,14 @@
+name: tests
+on: push
+jobs:
+  test:
+    name: nox
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@1.0.0
+    - uses: excitedleigh/setup-nox@0.1.0
+    - uses: dschep/install-poetry-action@v1.2
+      with:
+        preview: true
+    - run: nox
+    - run: poetry build
