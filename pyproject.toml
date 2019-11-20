@@ -22,6 +22,9 @@ pytest-cov = "^2.8.1"
 pytest-mock = "^1.11.2"
 xdoctest = "^0.10.2"
 
+[tool.poetry.extras]
+docs = ["sphinx", "sphinx-rtd-theme", "sphinx-autodoc-typehints"]
+
 [tool.poetry.scripts]
 hypermodern-python = "hypermodern_python.console:main"
 
