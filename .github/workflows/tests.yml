@@ -15,3 +15,6 @@ jobs:
       env:
         CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
     - run: poetry build
+    - if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+      run: |
+        poetry publish --username=__token__ --password=${{ secrets.PYPI_TOKEN }}
