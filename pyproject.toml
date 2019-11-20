@@ -7,6 +7,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/cjolowicz/hypermodern-python"
 repository = "https://github.com/cjolowicz/hypermodern-python"
+documentation = "https://hypermodern-python.readthedocs.io"
 keywords = ["hypermodern"]
 
 [tool.poetry.dependencies]
