@@ -11,4 +11,7 @@ jobs:
       with:
         preview: true
     - run: nox
+    - run: nox -e coverage
+      env:
+        CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
     - run: poetry build
