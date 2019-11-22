@@ -16,6 +16,7 @@ click = "^7.0"
 sphinx = {version = "^2.2.1", optional = true}
 sphinx-rtd-theme = {version = "^0.4.3", optional = true}
 sphinx-autodoc-typehints = {version = "^1.10.3", optional = true}
+starlette = "^0.13.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2.2"
