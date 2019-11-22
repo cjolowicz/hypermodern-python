@@ -1,4 +1,5 @@
 """Command-line interface for the hypermodern Python project."""
+import asyncio
 import click
 
 from . import __version__, splines
@@ -9,5 +10,6 @@ from . import __version__, splines
 @click.version_option(version=__version__)
 def main(count: int) -> None:
     """The hypermodern Python project."""
-    for spline in splines.reticulate(count):
+    coroutine = splines.reticulate(count)
+    for spline in asyncio.run(coroutine):
         click.echo(f"Reticulating spline {spline}...")
