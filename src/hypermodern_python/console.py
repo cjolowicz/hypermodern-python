@@ -1,5 +1,6 @@
 """Command-line interface for the hypermodern Python project."""
 import asyncio
+
 import click
 
 from . import __version__, splines
