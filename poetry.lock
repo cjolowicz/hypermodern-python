@@ -249,7 +249,7 @@ description = "Thin-wrapper around the mock package for easier use with py.test"
 name = "pytest-mock"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.12.0"
+version = "1.12.1"
 
 [package.dependencies]
 pytest = ">=2.7"
@@ -633,8 +633,8 @@ pytest-cov = [
     {file = "pytest_cov-2.8.1-py2.py3-none-any.whl", hash = "sha256:cdbdef4f870408ebdbfeb44e63e07eb18bb4619fae852f6e760645fa36172626"},
 ]
 pytest-mock = [
-    {file = "pytest-mock-1.12.0.tar.gz", hash = "sha256:fff6cbd15a05f104062aa778e1ded35927d3d29bb1164218b140678fb368e32b"},
-    {file = "pytest_mock-1.12.0-py2.py3-none-any.whl", hash = "sha256:ba8c0c38fdccee77d4666373e95cc115954863ede741b8505088fa1fc1a87c6c"},
+    {file = "pytest-mock-1.12.1.tar.gz", hash = "sha256:96a0cebc66e09930be2a15b03333d90b59584d3fb011924f81c14b50ee0afbba"},
+    {file = "pytest_mock-1.12.1-py2.py3-none-any.whl", hash = "sha256:e5381be2608e49547f5e47633c5f81241ebf6206d17ce516a7a18d5a917e3859"},
 ]
 pytz = [
     {file = "pytz-2019.3-py2.py3-none-any.whl", hash = "sha256:1c557d7d0e871de1f5ccd5833f60fb2550652da6be2693c1e02300743d21500d"},
