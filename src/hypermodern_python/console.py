@@ -8,14 +8,16 @@ import uvicorn
 from . import __version__, splines
 
 
-def _serve(bind):
+def _serve(bind: str) -> None:
+    """Spin up a web server to reticulate splines."""
     url = urllib.parse.urlsplit(f"//{bind}")
     host = url.hostname or "127.0.0.1"
     port = url.port or 8000
     uvicorn.run("hypermodern_python.app:app", host=host, port=port)
 
 
-async def _reticulate(count):
+async def _reticulate(count: int) -> None:
+    """Reticulate splines to the terminal."""
     async for spline in splines.reticulate(count):
         click.echo(f"Reticulating spline {spline}...")
 
