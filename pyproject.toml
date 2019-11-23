@@ -24,6 +24,7 @@ pytest = "^5.2.2"
 pytest-cov = "^2.8.1"
 pytest-mock = "^1.11.2"
 xdoctest = "^0.10.2"
+pytest-asyncio = "^0.10.0"
 
 [tool.poetry.extras]
 docs = ["sphinx", "sphinx-rtd-theme", "sphinx-autodoc-typehints"]
