@@ -8,6 +8,11 @@ import uvicorn
 from . import __version__, splines
 
 
+async def _reticulate(count):
+    async for spline in splines.reticulate(count):
+        click.echo(f"Reticulating spline {spline}...")
+
+
 @click.command()
 @click.option("-n", "--count", default=-1, help="Number of splines to reticulate")
 @click.option("--serve", type=str, help="Run a web server", metavar="HOST:PORT")
@@ -20,6 +25,5 @@ def main(count: int, serve: str) -> None:
         port = url.port or 8000
         return uvicorn.run("hypermodern_python.app:app", host=host, port=port)
 
-    coroutine = splines.reticulate(count)
-    for spline in asyncio.run(coroutine):
-        click.echo(f"Reticulating spline {spline}...")
+    coroutine = _reticulate(count)
+    asyncio.run(coroutine)
