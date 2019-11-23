@@ -1,9 +1,9 @@
 """Utilities for spline manipulation."""
 import asyncio
-from typing import Iterator
+from typing import AsyncIterator
 
 
-async def reticulate(count: int = -1) -> Iterator[int]:
+async def reticulate(count: int = -1) -> AsyncIterator[int]:
     """Reticulate splines.
 
     Args:
