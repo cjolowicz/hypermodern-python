@@ -12,6 +12,7 @@ keywords = ["hypermodern"]
 [tool.poetry.dependencies]
 python = "^3.7"
 click = "^7.0"
+sphinx = {version = "^2.3.0", optional = true}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.3.2"
