@@ -22,6 +22,16 @@ pytest-cov = "^2.8.1"
 [tool.poetry.scripts]
 hypermodern-python = "hypermodern_python.console:main"
 
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["hypermodern_python"]
+
+[tool.coverage.report]
+show_missing = true
+
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
