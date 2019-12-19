@@ -44,7 +44,7 @@ pytz = ">=2015.7"
 category = "main"
 description = "Python package for providing Mozilla's CA Bundle."
 name = "certifi"
-optional = true
+optional = false
 python-versions = "*"
 version = "2019.11.28"
 
@@ -52,7 +52,7 @@ version = "2019.11.28"
 category = "main"
 description = "Universal encoding detector for Python 2 and 3"
 name = "chardet"
-optional = true
+optional = false
 python-versions = "*"
 version = "3.0.4"
 
@@ -101,7 +101,7 @@ version = "0.15.2"
 category = "main"
 description = "Internationalized Domain Names in Applications (IDNA)"
 name = "idna"
-optional = true
+optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "2.8"
 
@@ -277,7 +277,7 @@ version = "2019.3"
 category = "main"
 description = "Python HTTP for Humans."
 name = "requests"
-optional = true
+optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 version = "2.22.0"
 
@@ -442,7 +442,7 @@ version = "0.10.0"
 category = "main"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 name = "urllib3"
-optional = true
+optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4"
 version = "1.25.7"
 
@@ -495,7 +495,7 @@ testing = ["pathlib2", "contextlib2", "unittest2"]
 docs = ["sphinx", "sphinx-rtd-theme", "sphinx-autodoc-typehints"]
 
 [metadata]
-content-hash = "a9215216f0169ce0b2113872362a4f43b3fd9ea0dee0ac11d755d61039303978"
+content-hash = "3d9430b97f4449c027ae579ab578b988b24df8fc996254bf41399a433b698be1"
 python-versions = "^3.7"
 
 [metadata.files]
