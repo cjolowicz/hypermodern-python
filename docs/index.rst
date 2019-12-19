@@ -19,11 +19,6 @@ Hypermodern Python's usage looks like:
 
     $ hypermodern-python [OPTIONS]
 
-.. option:: -n <count>, --count <count>
-
-    Number of splines to reticulate. By default, the program reticulates
-    splines until interrupted by Ctrl+C.
-
 .. option:: --version
 
     Display the version and exit.
@@ -31,9 +26,3 @@ Hypermodern Python's usage looks like:
 .. option:: --help
 
     Display a short usage message and exit.
-
-.. toctree::
-  :hidden:
-  :maxdepth: 2
-
-  splines
