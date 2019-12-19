@@ -22,6 +22,7 @@ pytest = "^5.2.2"
 pytest-cov = "^2.8.1"
 pytest-mock = "^1.11.2"
 xdoctest = "^0.11.0"
+coverage = {extras = ["toml"], version = "^5.0.1"}
 
 [tool.poetry.extras]
 docs = ["sphinx", "sphinx-rtd-theme", "sphinx-autodoc-typehints"]
