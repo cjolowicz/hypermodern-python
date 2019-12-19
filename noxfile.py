@@ -59,7 +59,19 @@ def tests(session: Session) -> None:
 @nox.session(python="3.8")
 def coverage(session: Session) -> None:
     """Upload coverage data."""
-    session.install("coverage", "codecov")
+    output = session.run(
+        "poetry",
+        "export",
+        "--format=requirements.txt",
+        "--without-hashes",
+        "--dev",
+        external=True,
+        silent=True,
+    )
+    (coverage,) = [
+        line for line in output.splitlines() if line.startswith("coverage==")
+    ]
+    session.install(coverage, "codecov")
     session.run("coverage", "xml")
     session.run("codecov", *session.posargs)
 
