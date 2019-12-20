@@ -3,6 +3,7 @@ import nox
 from nox.sessions import Session
 
 
+package = "hypermodern_python"
 nox.options.sessions = "lint", "mypy", "pytype", "tests"
 locations = "src", "tests", "noxfile.py", "docs/conf.py"
 
@@ -51,7 +52,7 @@ def pytype(session: Session) -> None:
 @nox.session(python=["3.8", "3.7"])
 def tests(session: Session) -> None:
     """Run the test suite."""
-    args = session.posargs or ["--cov", "--xdoctest"]
+    args = session.posargs or ["--cov", "--xdoctest", f"--typeguard-packages={package}"]
     session.run("poetry", "install", external=True)
     session.run("pytest", *args)
 
