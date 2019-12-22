@@ -3,7 +3,7 @@ import tempfile
 import nox
 
 
-nox.options.sessions = "lint", "tests"
+nox.options.sessions = "lint", "safety", "tests"
 locations = "src", "tests", "noxfile.py"
 
 
