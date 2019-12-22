@@ -452,7 +452,7 @@ description = "A rewrite of the builtin doctest module"
 name = "xdoctest"
 optional = false
 python-versions = "*"
-version = "0.10.3"
+version = "0.11.0"
 
 [package.dependencies]
 six = "*"
@@ -482,7 +482,7 @@ testing = ["pathlib2", "contextlib2", "unittest2"]
 docs = ["sphinx", "sphinx-rtd-theme", "sphinx-autodoc-typehints"]
 
 [metadata]
-content-hash = "33d1d02f3b6b3d40d696e02f455a9571135e54d39fd06cfcd20fd88e98acd0ba"
+content-hash = "3b9529e208690978e3a4944ddb79b6fcd6fae99da737a03f69635a9b6882e671"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -699,8 +699,8 @@ wcwidth = [
     {file = "wcwidth-0.1.7.tar.gz", hash = "sha256:3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e"},
 ]
 xdoctest = [
-    {file = "xdoctest-0.10.3-py2.py3-none-any.whl", hash = "sha256:8e96068a02f2394bd56415444d1a31fad908e01522df03695b876a73b8d500c4"},
-    {file = "xdoctest-0.10.3.tar.gz", hash = "sha256:520ad9c3980247f7f97d1b01d5ae751fa4e0de4951afcf9df5ef89a89c86d85e"},
+    {file = "xdoctest-0.11.0-py2.py3-none-any.whl", hash = "sha256:292d8c0e8de9bcab6ce3fa5009da445278ce343c744aa2ae260710f924c5242e"},
+    {file = "xdoctest-0.11.0.tar.gz", hash = "sha256:71951c60bb8b15fdf3c368c5636a6bbbd658ef5c2e5949e784adf5e1a1275fbd"},
 ]
 zipp = [
     {file = "zipp-0.6.0-py2.py3-none-any.whl", hash = "sha256:f06903e9f1f43b12d371004b4ac7b06ab39a44adc747266928ae6debfa7b3335"},
