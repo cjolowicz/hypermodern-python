@@ -1,4 +1,6 @@
 """Nox sessions."""
+import tempfile
+
 import nox
 from nox.sessions import Session
 
@@ -69,3 +71,21 @@ def docs(session: Session) -> None:
     """Build the documentation."""
     session.run("poetry", "install", "--extras=docs", external=True)
     session.run("sphinx-build", "docs", "docs/_build")
+
+
+@nox.session(python="3.8")
+def safety(session: Session) -> None:
+    """Check for known security vulnerabilities."""
+    with tempfile.NamedTemporaryFile() as requirements:
+        session.run(
+            "poetry",
+            "export",
+            "--format=requirements.txt",
+            "--without-hashes",
+            "--dev",
+            "--extras=docs",
+            f"--output={requirements.name}",
+            external=True,
+        )
+        session.install("safety")
+        session.run("safety", "check", f"--file={requirements.name}", "--full-report")
