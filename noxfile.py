@@ -5,7 +5,7 @@ import nox
 from nox.sessions import Session
 
 
-nox.options.sessions = "lint", "mypy", "pytype", "tests"
+nox.options.sessions = "lint", "mypy", "pytype", "tests", "safety"
 locations = "src", "tests", "noxfile.py", "docs/conf.py"
 
 
