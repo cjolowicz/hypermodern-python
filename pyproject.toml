@@ -21,7 +21,7 @@ sphinx-autodoc-typehints = {version = "^1.10.3", optional = true}
 pytest = "^5.2.2"
 pytest-cov = "^2.8.1"
 pytest-mock = "^1.11.2"
-xdoctest = "^0.10.2"
+xdoctest = "^0.11.0"
 
 [tool.poetry.extras]
 docs = ["sphinx", "sphinx-rtd-theme", "sphinx-autodoc-typehints"]
