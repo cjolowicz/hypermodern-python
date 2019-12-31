@@ -17,6 +17,7 @@ requests = "^2.22.0"
 [tool.poetry.dev-dependencies]
 pytest = "^5.3.2"
 coverage = {extras = ["toml"], version = "^5.0.1"}
+pytest-cov = "^2.8.1"
 
 [tool.poetry.scripts]
 hypermodern-python = "hypermodern_python.console:main"
