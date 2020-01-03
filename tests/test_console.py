@@ -11,7 +11,12 @@ def runner():
 
 @pytest.fixture
 def mock_requests_get(mocker):
-    return mocker.patch("requests.get")
+    mock = mocker.patch("requests.get")
+    mock.return_value.__enter__.return_value.json.return_value = {
+        "title": "Lorem Ipsum",
+        "extract": "Lorem ipsum dolor sit amet",
+    }
+    return mock
 
 
 def test_main_succeeds(runner, mock_requests_get):
