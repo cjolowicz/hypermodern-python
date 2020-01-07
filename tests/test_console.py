@@ -10,6 +10,11 @@ def runner():
     return click.testing.CliRunner()
 
 
+@pytest.fixture
+def mock_wikipedia_random_page(mocker):
+    return mocker.patch("hypermodern_python.wikipedia.random_page")
+
+
 def test_main_succeeds(runner, mock_requests_get):
     result = runner.invoke(console.main)
     assert result.exit_code == 0
