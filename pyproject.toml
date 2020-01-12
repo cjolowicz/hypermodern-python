@@ -22,6 +22,7 @@ pytest-mock = "^2.0.0"
 flake8 = "^3.7.9"
 black = "^19.10b0"
 flake8-black = "^0.1.1"
+flake8-import-order = "^0.18.1"
 
 [tool.poetry.scripts]
 hypermodern-python = "hypermodern_python.console:main"
