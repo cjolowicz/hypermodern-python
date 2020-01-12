@@ -20,6 +20,7 @@ coverage = {extras = ["toml"], version = "^5.0.1"}
 pytest-cov = "^2.8.1"
 pytest-mock = "^2.0.0"
 flake8 = "^3.7.9"
+black = "^19.10b0"
 
 [tool.poetry.scripts]
 hypermodern-python = "hypermodern_python.console:main"
