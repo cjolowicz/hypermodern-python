@@ -134,6 +134,18 @@ flake8 = ">=3.0.0"
 
 [[package]]
 category = "dev"
+description = "A plugin for flake8 finding likely bugs and design problems in your program. Contains warnings that don't belong in pyflakes and pycodestyle."
+name = "flake8-bugbear"
+optional = false
+python-versions = ">=3.6"
+version = "20.1.2"
+
+[package.dependencies]
+attrs = ">=19.2.0"
+flake8 = ">=3.0.0"
+
+[[package]]
+category = "dev"
 description = "Flake8 and pylama plugin that checks the ordering of import statements."
 name = "flake8-import-order"
 optional = false
@@ -394,7 +406,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "a856aec4cda06eda579486d34ea2fa11c498e6d72180654574501af8827e02c5"
+content-hash = "4fad364d6d220d8b286c0e2b435b84bdf388038ca12886e0366c4280a52c5fdd"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -473,6 +485,10 @@ flake8 = [
 ]
 flake8-black = [
     {file = "flake8-black-0.1.1.tar.gz", hash = "sha256:56f85aaa5a83f06a3f61e680e3b50f156b5e557ebdcb964d823d86f4c108b0c8"},
+]
+flake8-bugbear = [
+    {file = "flake8-bugbear-20.1.2.tar.gz", hash = "sha256:bc4a35972342256abddf84591fbb82f7360981db1b71e39a8ba0400e906239cf"},
+    {file = "flake8_bugbear-20.1.2-py36.py37.py38-none-any.whl", hash = "sha256:09a12ebe427279cf7aa9445114a68d83a6f0ffccdd4105368d6e85373541eb8f"},
 ]
 flake8-import-order = [
     {file = "flake8-import-order-0.18.1.tar.gz", hash = "sha256:a28dc39545ea4606c1ac3c24e9d05c849c6e5444a50fb7e9cdd430fc94de6e92"},
