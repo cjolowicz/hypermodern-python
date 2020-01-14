@@ -5,7 +5,10 @@ repos:
     -   id: check-yaml
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
--   repo: https://github.com/psf/black
-    rev: 19.10b0
+-   repo: local
     hooks:
     -   id: black
+        name: black
+        entry: poetry run black
+        language: system
+        types: [python]
