@@ -28,6 +28,7 @@ flake8-bandit = "^2.1.2"
 safety = "^1.8.5"
 isort = {extras = ["pyproject"], version = "^4.3.21"}
 seed-isort-config = "^1.9.4"
+flake8-isort = "^2.8.0"
 
 [tool.poetry.scripts]
 hypermodern-python = "hypermodern_python.console:main"
