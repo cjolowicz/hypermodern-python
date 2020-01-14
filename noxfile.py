@@ -21,6 +21,13 @@ def install_with_constraints(session, *args, **kwargs):
 
 
 @nox.session(python="3.8")
+def isort(session):
+    args = session.posargs or locations
+    install_with_constraints(session, "isort[pyproject]")
+    session.run("isort", "--recursive", *args)
+
+
+@nox.session(python="3.8")
 def black(session):
     args = session.posargs or locations
     install_with_constraints(session, "black")
