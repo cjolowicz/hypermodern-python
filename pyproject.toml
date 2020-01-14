@@ -47,6 +47,7 @@ fail_under = 100
 force_grid_wrap = 0
 include_trailing_comma = true
 known_first_party = ["hypermodern_python"]
+known_third_party = []
 line_length = 88
 lines_after_import = 2
 multi_line_output = 3
