@@ -42,6 +42,15 @@ source = ["hypermodern_python"]
 show_missing = true
 fail_under = 100
 
+[tool.isort]
+force_grid_wrap = 0
+include_trailing_comma = true
+known_first_party = ["hypermodern_python"]
+line_length = 88
+lines_after_import = 2
+multi_line_output = 3
+use_parentheses = true
+
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
