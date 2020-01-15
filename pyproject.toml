@@ -26,6 +26,7 @@ flake8-import-order = "^0.18.1"
 flake8-bugbear = "^20.1.2"
 flake8-bandit = "^2.1.2"
 safety = "^1.8.5"
+mypy = "^0.761"
 
 [tool.poetry.scripts]
 hypermodern-python = "hypermodern_python.console:main"
