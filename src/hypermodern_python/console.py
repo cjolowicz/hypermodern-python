@@ -1,23 +1,26 @@
 import textwrap
 
-import click
+import typer
 
-from . import __version__, wikipedia
+from . import wikipedia
 
 
-@click.command()
-@click.option(
-    "--language",
-    "-l",
-    default="en",
-    help="Language edition of Wikipedia",
-    metavar="LANG",
-    show_default=True,
-)
-@click.version_option(version=__version__)
-def main(language: str) -> None:
+def _main(
+    language: str = typer.Option(  # noqa: B008
+        "en",
+        "--language",
+        "-l",
+        help="Language edition of Wikipedia",
+        metavar="LANG",
+        show_default=True,
+    )
+) -> None:
     """The hypermodern Python project."""
     page = wikipedia.random_page(language=language)
 
-    click.secho(page.title, fg="green")
-    click.echo(textwrap.fill(page.extract))
+    typer.secho(page.title, fg="green")
+    typer.echo(textwrap.fill(page.extract))
+
+
+def main() -> None:
+    return typer.run(_main)
