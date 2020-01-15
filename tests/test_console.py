@@ -1,5 +1,8 @@
+from unittest.mock import Mock
+
 import click.testing
 import pytest
+from pytest_mock import MockFixture
 import requests
 
 from hypermodern_python import console
@@ -11,7 +14,7 @@ def runner():
 
 
 @pytest.fixture
-def mock_wikipedia_random_page(mocker):
+def mock_wikipedia_random_page(mocker: MockFixture) -> Mock:
     return mocker.patch("hypermodern_python.wikipedia.random_page")
 
 
