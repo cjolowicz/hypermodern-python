@@ -26,6 +26,6 @@ def random_page(language: str = "en") -> Page:
             response.raise_for_status()
             data = response.json()
             return schema.load(data)
-    except requests.RequestException as error:
+    except (requests.RequestException, marshmallow.ValidationError) as error:
         message = str(error)
         raise click.ClickException(message)
