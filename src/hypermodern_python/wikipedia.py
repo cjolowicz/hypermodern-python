@@ -1,3 +1,4 @@
+from typing import Final
 from dataclasses import dataclass
 
 import click
@@ -6,7 +7,7 @@ import marshmallow
 import requests
 
 
-API_URL: str = "https://{language}.wikipedia.org/api/rest_v1/page/random/summary"
+API_URL: Final = "https://{language}.wikipedia.org/api/rest_v1/page/random/summary"
 
 
 @dataclass
