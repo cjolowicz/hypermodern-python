@@ -1,7 +1,7 @@
 from dataclasses import dataclass
-from typing import Any
 
 import click
+import desert
 import requests
 
 
@@ -14,13 +14,17 @@ class Page:
     extract: str
 
 
-def random_page(language: str = "en") -> Any:
+schema = desert.schema(Page)
+
+
+def random_page(language: str = "en") -> Page:
     url = API_URL.format(language=language)
 
     try:
         with requests.get(url) as response:
             response.raise_for_status()
-            return response.json()
+            data = response.json()
+            return schema.load(data)
     except requests.RequestException as error:
         message = str(error)
         raise click.ClickException(message)
