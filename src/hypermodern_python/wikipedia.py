@@ -2,6 +2,7 @@ from dataclasses import dataclass
 
 import click
 import desert
+import marshmallow
 import requests
 
 
@@ -14,7 +15,7 @@ class Page:
     extract: str
 
 
-schema = desert.schema(Page)
+schema = desert.schema(Page, meta={"unknown": marshmallow.EXCLUDE})
 
 
 def random_page(language: str = "en") -> Page:
