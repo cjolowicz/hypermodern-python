@@ -663,6 +663,22 @@ test = ["pytest", "pytest-cov", "typing-extensions"]
 
 [[package]]
 category = "main"
+description = "Typer, build great CLIs. Easy to code. Based on Python type hints."
+name = "typer"
+optional = false
+python-versions = ">=3.6"
+version = "0.0.8"
+
+[package.dependencies]
+click = ">=7.0.0,<8.0.0"
+
+[package.extras]
+all = ["colorama", "click-completion"]
+doc = ["mkdocs", "mkdocs-material", "markdown-include"]
+test = ["click-completion", "pytest (>=4.4.0)", "pytest-cov", "coverage", "pytest-xdist", "pytest-sugar", "mypy", "black", "isort"]
+
+[[package]]
+category = "main"
 description = "Backported and Experimental Type Hints for Python 3.5+"
 name = "typing-extensions"
 optional = false
@@ -719,7 +735,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "64d506c2bc036f0720d9627a9d49cd8d88bb5c1084e5a36ce1e6e04210b89eb2"
+content-hash = "2e53be38a520732df9e119a513d355fca3c9efa6c6c348ff5e1ea151f8bfeaa4"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1040,6 +1056,10 @@ typed-ast = [
 typeguard = [
     {file = "typeguard-2.7.1-py3-none-any.whl", hash = "sha256:1d3710251d3d3d6c64e0c49f45edec2e88ddc386a51e89c3ec0703efeb8b3b81"},
     {file = "typeguard-2.7.1.tar.gz", hash = "sha256:2d545c71e9439c21bcd7c28f5f55b3606e6106f7031ab58375656a1aed483ef2"},
+]
+typer = [
+    {file = "typer-0.0.8-py3-none-any.whl", hash = "sha256:ada3c007a2d21cd0006a459670fbc76dde8a3bea10298167f41723f356115a6b"},
+    {file = "typer-0.0.8.tar.gz", hash = "sha256:50cbb5659cd359eeae807d970fcb898589529d440c70af126c6ea8425443387d"},
 ]
 typing-extensions = [
     {file = "typing_extensions-3.7.4.1-py2-none-any.whl", hash = "sha256:910f4656f54de5993ad9304959ce9bb903f90aadc7c67a0bef07e678014e892d"},
