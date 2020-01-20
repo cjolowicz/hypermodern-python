@@ -1,6 +1,6 @@
 from unittest.mock import Mock
 
-import click.testing
+from click.testing import CliRunner
 import pytest
 from pytest_mock import MockFixture
 import requests
@@ -9,8 +9,8 @@ from hypermodern_python import console
 
 
 @pytest.fixture
-def runner():
-    return click.testing.CliRunner()
+def runner() -> CliRunner:
+    return CliRunner()
 
 
 @pytest.fixture
