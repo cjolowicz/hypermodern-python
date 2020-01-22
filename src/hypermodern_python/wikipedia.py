@@ -1,3 +1,4 @@
+"""Client for the Wikipedia REST API, version 1."""
 from dataclasses import dataclass
 
 import click
