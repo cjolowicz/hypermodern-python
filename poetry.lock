@@ -114,6 +114,14 @@ version = "*"
 toml = ["toml"]
 
 [[package]]
+category = "dev"
+description = "A utility for ensuring Google-style docstrings stay up to date with the source code."
+name = "darglint"
+optional = false
+python-versions = ">=3.5"
+version = "1.1.2"
+
+[[package]]
 category = "main"
 description = "A backport of the dataclasses module for Python 3.6"
 name = "dataclasses"
@@ -753,7 +761,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "1c96382ea5f137614895deb8e5c714d6eb7b38d22f30fa7530936716d0225847"
+content-hash = "56cdf5effd753b3fb0ff24cd17e24387c3416aaec4e3fbca389bde571ef0f86e"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -825,6 +833,10 @@ coverage = [
     {file = "coverage-5.0.3-cp39-cp39m-win32.whl", hash = "sha256:b63dd43f455ba878e5e9f80ba4f748c0a2156dde6e0e6e690310e24d6e8caf40"},
     {file = "coverage-5.0.3-cp39-cp39m-win_amd64.whl", hash = "sha256:da93027835164b8223e8e5af2cf902a4c80ed93cb0909417234f4a9df3bcd9af"},
     {file = "coverage-5.0.3.tar.gz", hash = "sha256:77afca04240c40450c331fa796b3eab6f1e15c5ecf8bf2b8bee9706cd5452fef"},
+]
+darglint = [
+    {file = "darglint-1.1.2-py3-none-any.whl", hash = "sha256:01770c3e43e96266f54f6e2c7d911feed48b11a4abe7324c05a6ff9bdcabbf18"},
+    {file = "darglint-1.1.2.tar.gz", hash = "sha256:8177e69e8305bcb6785c4abb482523b006f6fa76d44e1a7db3dcc5a8dca427dd"},
 ]
 dataclasses = [
     {file = "dataclasses-0.6-py3-none-any.whl", hash = "sha256:454a69d788c7fda44efd71e259be79577822f5e3f53f029a22d08004e951dc9f"},
