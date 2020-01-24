@@ -11,11 +11,13 @@ from hypermodern_python import console
 
 @pytest.fixture
 def runner() -> CliRunner:
+    """Fixture for invoking command-line interfaces."""
     return CliRunner()
 
 
 @pytest.fixture
 def mock_wikipedia_random_page(mocker: MockFixture) -> Mock:
+    """Fixture for mocking wikipedia.random_page."""
     return mocker.patch("hypermodern_python.wikipedia.random_page")
 
 
