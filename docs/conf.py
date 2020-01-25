@@ -1,4 +1,7 @@
 """Sphinx configuration."""
+from datetime import datetime
+
+
 project = "Hypermodern Python"
 author = "Claudio Jolowicz"
-copyright = f"2020, {author}"
+copyright = f"{datetime.now().year}, {author}"
