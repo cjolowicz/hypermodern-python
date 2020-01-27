@@ -5,6 +5,7 @@ The Hypermodern Python Project
    :hidden:
    :maxdepth: 1
 
+   license
    reference
 
 The example project for the
