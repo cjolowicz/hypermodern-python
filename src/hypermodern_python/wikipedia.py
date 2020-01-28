@@ -1,4 +1,7 @@
-"""Client for the Wikipedia REST API, version 1."""
+"""Client for the Wikipedia REST API, version 1.
+
+See `API documentation <https://en.wikipedia.org/api/rest_v1/#/>`_.
+"""
 from dataclasses import dataclass
 
 import click
