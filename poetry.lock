@@ -270,7 +270,7 @@ description = "A plugin for flake8 finding likely bugs and design problems in yo
 name = "flake8-bugbear"
 optional = false
 python-versions = ">=3.6"
-version = "20.1.2"
+version = "20.1.3"
 
 [package.dependencies]
 attrs = ">=19.2.0"
@@ -1086,8 +1086,8 @@ flake8-black = [
     {file = "flake8-black-0.1.1.tar.gz", hash = "sha256:56f85aaa5a83f06a3f61e680e3b50f156b5e557ebdcb964d823d86f4c108b0c8"},
 ]
 flake8-bugbear = [
-    {file = "flake8-bugbear-20.1.2.tar.gz", hash = "sha256:bc4a35972342256abddf84591fbb82f7360981db1b71e39a8ba0400e906239cf"},
-    {file = "flake8_bugbear-20.1.2-py36.py37.py38-none-any.whl", hash = "sha256:09a12ebe427279cf7aa9445114a68d83a6f0ffccdd4105368d6e85373541eb8f"},
+    {file = "flake8-bugbear-20.1.3.tar.gz", hash = "sha256:3f11243dc710486449fac3be776ac2723786ed544fc0734f6134935ded82a1e9"},
+    {file = "flake8_bugbear-20.1.3-py36.py37.py38-none-any.whl", hash = "sha256:cc73c885e2c605dc89073afc16e308bba987098a9507023aa24590bd06ebd786"},
 ]
 flake8-docstrings = [
     {file = "flake8-docstrings-1.5.0.tar.gz", hash = "sha256:3d5a31c7ec6b7367ea6506a87ec293b94a0a46c0bce2bb4975b7f1d09b6f3717"},
