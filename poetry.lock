@@ -653,8 +653,8 @@ description = "Python type inferencer"
 marker = "python_version == \"3.7\""
 name = "pytype"
 optional = false
-python-versions = "*"
-version = "2020.1.8"
+python-versions = "<3.8,>=3.5"
+version = "2020.4.22"
 
 [package.dependencies]
 attrs = "*"
@@ -976,7 +976,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "7a6041abcea2263071a44c32f5acf243fe063e33a046bd8a0180a8c236a4994a"
+content-hash = "d26a71176add09c418569f6defddd7e256ba128a282a97fd4ec6ad89a9c7d2ea"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1283,7 +1283,7 @@ pytest-mock = [
     {file = "pytest_mock-2.0.0-py2.py3-none-any.whl", hash = "sha256:cb67402d87d5f53c579263d37971a164743dc33c159dfb4fb4a86f37c5552307"},
 ]
 pytype = [
-    {file = "pytype-2020.1.8.tar.gz", hash = "sha256:9312283c9db829f9abaa12bb8cb20a5a3cef6911feb11e837f7d6d996206015f"},
+    {file = "pytype-2020.4.22.tar.gz", hash = "sha256:5dbb2f551e94f09b996c71fd15158f1ba2a0d941841803a8e2a0cbcf587e478a"},
 ]
 pytz = [
     {file = "pytz-2019.3-py2.py3-none-any.whl", hash = "sha256:1c557d7d0e871de1f5ccd5833f60fb2550652da6be2693c1e02300743d21500d"},
