@@ -12,7 +12,7 @@ keywords = ["hypermodern"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-click = "^7.0"
+click = ">=7,<9"
 requests = "^2.22.0"
 marshmallow = "^3.3.0"
 desert = "^2020.1.6"
